@@ -1,0 +1,20 @@
+# Secrets: never commit your API keys
+.env
+
+# Virtual environments
+venv/
+.venv/
+
+# Generated outputs (recreated by running the script)
+videos/
+*.mp4
+*.csv
+*_preview.png
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Editors and OS files
+.vscode/
+Thumbs.db

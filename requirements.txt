@@ -1,0 +1,6 @@
+fredapi
+pandas
+numpy
+matplotlib
+python-dotenv
+imageio-ffmpeg

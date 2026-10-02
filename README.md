@@ -9,6 +9,7 @@ Each project lives in its own folder, with its code, a short write-up and instru
 | # | Project | What it shows | Stack |
 |---|---------|---------------|-------|
 | 01 | [US Treasury Yield Curve, 1982 to today](01-us-yield-curve-animation/) | An animated history of the US yield curve and its inversions before recessions | Python, pandas, matplotlib, FRED API |
+| 02 | [Nelson-Siegel factors of the US yield curve, 1982–2026](02-nelson-siegel-yield-curve-factors/) | Level, slope and curvature of the curve over 44 years, and where the model struggles | Python, pandas, matplotlib, Nelson-Siegel, FRED API |
 
 More projects coming soon.
 

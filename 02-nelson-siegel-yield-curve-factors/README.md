@@ -48,7 +48,7 @@ The notebook fits the Nelson-Siegel model to the US Treasury yield curve **every
 - High correlations with the observed measures are partly mechanical: both are linear combinations of the same yields.
 - The yield curve is a leading indicator, not a forecast: not every inversion is followed by a recession.
 
-  ## References
+## References
 
   - Diebold, F. X. & Li, C. (2006). *Forecasting the Term Structure of Government Bond Yields*. Journal of Econometrics, 130(2), 337–364. [Free working paper (NBER)](https://www.nber.org/papers/w10048)
 

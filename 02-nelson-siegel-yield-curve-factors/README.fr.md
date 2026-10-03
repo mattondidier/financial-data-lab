@@ -48,7 +48,7 @@ Le notebook ajuste le modèle de Nelson-Siegel sur la courbe des taux du Trésor
 - Les fortes corrélations avec les mesures observées sont en partie mécaniques : les deux sont des combinaisons linéaires des mêmes taux.
 - La courbe des taux est un indicateur avancé, pas une prévision : toutes les inversions ne sont pas suivies d'une récession.
 
-  ## References
+## References
 
   - Diebold, F. X. & Li, C. (2006). *Forecasting the Term Structure of Government Bond Yields*. Journal of Econometrics, 130(2), 337–364. [Free working paper (NBER)](https://www.nber.org/papers/w10048)
 

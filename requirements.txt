@@ -6,3 +6,4 @@ python-dotenv
 imageio-ffmpeg
 nelson_siegel_svensson
 ipykernel
+scipy

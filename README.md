@@ -31,6 +31,6 @@ Then follow the instructions in each project folder.
 
 ## Author
 
-**Didier Matton** | Financial Engineer | Full Stack Data Scientist
+**Didier Matton** | Financial Engineer | Full-Stack Data Scientist | Python, Django, VBA, BI & LLMs | Quantitative Finance
 
 [LinkedIn](https://www.linkedin.com/in/didier-matton-8819b52a1/) · [YouTube](https://www.youtube.com/channel/UCQ_AZUFrhvHRLfTUvMzFUrw)

@@ -62,5 +62,5 @@ Le notebook réalise une analyse en composantes principales sur huit taux du Tr�
 
 ## Auteur
 
-**Didier Matton** | Ingénieur financier | Data Scientist Full Stack
+**Didier Matton** | Ingénieur financier | Data Scientist Full Stack | Python, Django, VBA, BI & LLMs | Finance quantitative
 

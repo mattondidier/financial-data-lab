@@ -68,4 +68,4 @@ Le notebook applique la méthode de Diebold et Li (2006) : la courbe des taux am
 
 ## Auteur
 
-**Didier Matton** | Ingénieur financier | Data Scientist Full Stack
+**Didier Matton** | Ingénieur financier | Data Scientist Full Stack | Python, Django, VBA, BI & LLMs | Finance quantitative

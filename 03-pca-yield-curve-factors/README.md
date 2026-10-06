@@ -62,4 +62,4 @@ The notebook runs a principal component analysis on eight US Treasury yields ove
 
 ## Author
 
-**Didier Matton** | Financial Engineer | Full-Stack Data Scientist
+**Didier Matton** | Financial Engineer | Full-Stack Data Scientist | Python, Django, VBA, BI & LLMs | Quantitative Finance

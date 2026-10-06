@@ -58,4 +58,4 @@ Le notebook ajuste le modèle de Nelson-Siegel sur la courbe des taux du Trésor
 
 ## Auteur
 
-**Didier Matton** | Ingénieur financier | Data Scientist Full Stack
+**Didier Matton** | Ingénieur financier | Data Scientist Full Stack | Python, Django, VBA, BI & LLMs | Finance quantitative

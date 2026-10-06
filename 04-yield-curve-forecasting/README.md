@@ -68,4 +68,4 @@ The notebook applies the method of Diebold and Li (2006): the US yield curve is 
 
 ## Author
 
-**Didier Matton** | Financial Engineer | Full-Stack Data Scientist
+**Didier Matton** | Financial Engineer | Full-Stack Data Scientist | Python, Django, VBA, BI & LLMs | Quantitative Finance

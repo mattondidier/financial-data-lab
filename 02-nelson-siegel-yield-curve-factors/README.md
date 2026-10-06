@@ -58,4 +58,4 @@ The notebook fits the Nelson-Siegel model to the US Treasury yield curve **every
 
 ## Author
 
-**Didier Matton** | Financial Engineer | Full-Stack Data Scientist
+**Didier Matton** | Financial Engineer | Full-Stack Data Scientist | Python, Django, VBA, BI & LLMs | Quantitative Finance

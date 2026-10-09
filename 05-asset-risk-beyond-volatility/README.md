@@ -4,7 +4,7 @@
 
 Over 2015–2026, Bitcoin's Sharpe ratio (1.02) is well above the S&P 500's (0.70). This project tests whether that gap is statistically distinguishable from chance once fat tails, correlation and instability over time are taken into account. Gold serves as a third, reference asset.
 
-**Short answer: no.** With 12 years of daily data, the difference cannot be distinguished from noise, and the ranking flips when the sample starts in 2018 instead of 2015.
+**Short answer: we can't tell.** With 12 years of daily data, the difference cannot be distinguished from noise, and the ranking flips when the sample starts in 2018 instead of 2015. Not rejecting the null hypothesis does not prove the two Sharpe ratios are equal: the data are consistent with Bitcoin being clearly better, equivalent or slightly worse.
 
 ## Key findings
 
@@ -12,7 +12,7 @@ Over 2015–2026, Bitcoin's Sharpe ratio (1.02) is well above the S&P 500's (0.7
 |:---|:---|
 | Sharpe difference, Bitcoin − S&P 500 | 0.32, standard error ≈ 0.34, **p ≈ 0.35**, 95% interval [−0.35, 0.97] |
 | Start in January 2018 instead of January 2015 | Bitcoin's Sharpe falls from 1.02 to 0.59: **from first to last**, behind the S&P 500 (0.67) and gold (0.69) |
-| Data needed to detect a 0.32 gap | About **57 years** of daily data (correlation 0.24) |
+| Data needed to detect a 0.32 gap | At least **57 years** of daily data to reach the 5% threshold, about 117 years for an 80% chance of detecting it |
 | Fat tails | Student t degrees of freedom of 2.3 to 3.7: theoretical kurtosis is infinite; each asset's worst day sits 10.5–11 standard deviations below its mean |
 | Correlation with equities | Regime change in 2020: Bitcoin from 0.02 to 0.39, gold from −0.17 to +0.15 |
 
@@ -47,7 +47,7 @@ Over 2015–2026, Bitcoin's Sharpe ratio (1.02) is well above the S&P 500's (0.7
 
 ## Other results
 
-| Asset | Volatility | Sharpe | Sortino | Student ν | 95% CI of the Sharpe |
+| Asset | Volatility (log returns) | Sharpe | Sortino | Student ν | 95% CI of the Sharpe |
 |:---|:---|:---|:---|:---|:---|
 | S&P 500 | 17.6% | 0.70 | 0.99 | 2.76 | [0.13, 1.28] |
 | Bitcoin | 66.0% | 1.02 | 1.54 | 2.30 | [0.45, 1.60] |

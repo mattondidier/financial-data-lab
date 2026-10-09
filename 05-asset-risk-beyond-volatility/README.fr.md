@@ -4,7 +4,7 @@
 
 Sur 2015-2026, le ratio de Sharpe du Bitcoin (1,02) dépasse nettement celui du S&P 500 (0,70). Ce projet vérifie si cet écart se distingue statistiquement du hasard, une fois prises en compte les queues épaisses, la corrélation entre actifs et l'instabilité dans le temps. L'or sert d'actif de référence.
 
-**Réponse courte : non.** Avec 12 ans de données quotidiennes, la différence ne se distingue pas du bruit, et le classement s'inverse quand l'échantillon démarre en 2018 au lieu de 2015.
+**Réponse courte : on ne peut pas le dire.** Avec 12 ans de données quotidiennes, la différence ne se distingue pas du bruit, et le classement s'inverse quand l'échantillon démarre en 2018 au lieu de 2015. Ne pas rejeter l'hypothèse nulle ne prouve pas que les deux Sharpe sont égaux : les données sont compatibles avec un Bitcoin nettement meilleur, équivalent ou un peu moins bon.
 
 ## Résultats clés
 
@@ -12,7 +12,7 @@ Sur 2015-2026, le ratio de Sharpe du Bitcoin (1,02) dépasse nettement celui du 
 |:---|:---|
 | Différence de Sharpe, Bitcoin − S&P 500 | 0,32, erreur-type ≈ 0,34, **p ≈ 0,35**, intervalle à 95 % [−0,35 ; 0,97] |
 | Départ en janvier 2018 au lieu de janvier 2015 | Le Sharpe du Bitcoin passe de 1,02 à 0,59 : **de la première à la dernière place**, derrière le S&P 500 (0,67) et l'or (0,69) |
-| Données nécessaires pour détecter un écart de 0,32 | Environ **57 ans** de données quotidiennes (corrélation de 0,24) |
+| Données nécessaires pour détecter un écart de 0,32 | Au moins **57 ans** de données quotidiennes pour atteindre le seuil de 5 %, environ 117 ans pour avoir 80 % de chances de le détecter |
 | Queues épaisses | Degrés de liberté de la loi de Student entre 2,3 et 3,7 : aplatissement théorique infini ; le pire jour de chaque actif se situe 10,5 à 11 écarts-types sous sa moyenne |
 | Corrélation avec les actions | Changement de régime en 2020 : Bitcoin de 0,02 à 0,39, or de −0,17 à +0,15 |
 
@@ -47,7 +47,7 @@ Sur 2015-2026, le ratio de Sharpe du Bitcoin (1,02) dépasse nettement celui du 
 
 ## Autres résultats
 
-| Actif | Volatilité | Sharpe | Sortino | ν de Student | IC à 95 % du Sharpe |
+| Actif | Volatilité (rendements log) | Sharpe | Sortino | ν de Student | IC à 95 % du Sharpe |
 |:---|:---|:---|:---|:---|:---|
 | S&P 500 | 17,6 % | 0,70 | 0,99 | 2,76 | [0,13 ; 1,28] |
 | Bitcoin | 66,0 % | 1,02 | 1,54 | 2,30 | [0,45 ; 1,60] |

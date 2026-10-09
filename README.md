@@ -12,6 +12,7 @@ Each project lives in its own folder, with its code, a short write-up and instru
 | 02 | [Nelson-Siegel factors of the US yield curve, 1982–2026](02-nelson-siegel-yield-curve-factors/) | Level, slope and curvature of the curve over 44 years, and where the model struggles | Python, pandas, matplotlib, Nelson-Siegel, FRED API |
 | 03 | [PCA of the US yield curve vs Nelson-Siegel, 1982–2026](03-pca-yield-curve-factors/) | Whether a purely statistical method recovers the level, slope and curvature of Nelson-Siegel, on levels and monthly changes | Python, NumPy, pandas, PCA, FRED API |
 | 04 | [Forecasting the US yield curve: Diebold-Li vs random walk, 1982–2026](04-yield-curve-forecasting/) | Whether the Nelson-Siegel factors forecast the curve out of sample, with a Diebold-Mariano test and a robustness check | Python, NumPy, pandas, SciPy, FRED API |
+| 05 | [Bitcoin vs S&P 500: is the Sharpe ratio difference real? 2015–2026](05-asset-risk-beyond-volatility/) | Whether Bitcoin's higher Sharpe ratio is distinguishable from chance, with fat tails, a paired block bootstrap and a start-date robustness check | Python, NumPy, pandas, SciPy, yfinance, FRED API |
 
 
 More projects coming soon.

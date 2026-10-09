@@ -8,4 +8,4 @@ nelson_siegel_svensson
 ipykernel
 scipy
 jinja2
-python-dotenv
+yfinance

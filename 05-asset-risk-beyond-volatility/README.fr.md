@@ -79,10 +79,9 @@ cd financial-data-lab
 python -m venv venv
 venv\Scripts\activate            # Windows  |  source venv/bin/activate sous macOS/Linux
 pip install -r requirements.txt
-copy .env.example .env           # Windows  |  cp .env.example .env sous macOS/Linux
 ```
+Créez un fichier `.env` à la racine du dépôt contenant votre clé API FRED gratuite (`FRED_API_KEY=votre_clé`), puis ouvrez `05-asset-risk-beyond-volatility/asset_risk.ipynb` et exécutez toutes les cellules. Les graphiques sont enregistrés dans `assets/`.
 
-Ajoutez une clé API FRED gratuite dans `.env` (`FRED_API_KEY=...`), puis ouvrez `05-asset-risk-beyond-volatility/asset_risk.ipynb` et exécutez toutes les cellules. Les graphiques sont enregistrés dans `assets/`.
 
 ## Références
 

@@ -4,15 +4,16 @@
 
 An equal-weight portfolio of the nine original S&P 500 sector ETFs spreads its risk across the whole economy. This project tests whether that diversification still works when the market falls: how sector correlations and volatilities change in crises, how much of the change is a volatility effect, whether stress-test correlation matrices remain usable for simulation, and what it all means for portfolio losses.
 
-**Short answer: it depends on the crisis, and sector diversification does not protect against the market itself.** In a sector-driven bust (2000–2002), correlations fell and diversification worked. In systemic crises (2007–2009, 2020), correlations rose to 0.73–0.88 and one factor absorbed up to 90% of sector variance. And in a Monte Carlo simulation, the volatility shock matters far more than the rise in correlations.
+**Short answer: it depends on the crisis, and sector diversification does not protect against the market itself.** In a sector-driven bust (2000–2002), correlations fell and diversification worked. In systemic crises (2007–2009, 2020), correlations rose to 0.73–0.88 and one factor absorbed up to 90% of sector variance. In a Monte Carlo simulation, the volatility shock matters far more than the rise in correlations, for a structural reason: sector diversification was weak to begin with, so there was little to lose.
 
 ## Key findings
 
 | | Result |
 |:---|:---|
 | Average sector correlation | 0.59 in calm periods; **0.44** in 2000–2002, **0.73** in 2007–2009, **0.88** in 2020, 0.62 in 2022 |
-| Volatility vs correlation (simulated) | P(one-year loss > 20%): 1.8% calm → 2.9% with crisis correlations → **22.7%** with crisis correlations and volatilities |
-| Diversification ratio | 1.25 in calm markets → **1.05** under a worst-case stress matrix |
+| Volatility vs correlation (simulated) | P(one-year loss > 20%): 1.8% calm → **22.1%** with 2007–2009 correlations and volatilities. Averaged over both orders of the decomposition: **+18.7 points from volatilities**, +1.6 points from correlations |
+| Why volatility dominates | The calm diversification ratio is only 1.25: even with every correlation at 1, portfolio volatility could rise by at most 25% (15.0% → 18.8%), while sector volatility more than doubles (18.8% → 41.1%) |
+| Diversification ratio under stress | 1.25 in calm markets → **1.05** under a worst-case stress matrix |
 | Forbes & Rigobon (2002) correction | Crisis correlations fall to 0.32–0.48, below the calm level: "no contagion, only interdependence" (probably an overcorrection) |
 | Worst-case stress matrix | Highest correlation per pair across crises: **not positive definite** (smallest eigenvalue −0.045), Cholesky fails; Higham's nearest correlation matrix repairs it with a largest change of 0.015 |
 | Absorption ratio | First eigenvalue: 64% of sector variance in calm periods, **90%** during the 2020 crash |
@@ -27,8 +28,8 @@ An equal-weight portfolio of the nine original S&P 500 sector ETFs spreads its r
 |:---|:---|
 | Assets | Nine SPDR sector ETFs (XLB, XLE, XLF, XLI, XLK, XLP, XLU, XLV, XLY) and SPY as market benchmark — Yahoo Finance via `yfinance`, adjusted closes (dividends reinvested) |
 | Excluded | XLRE (real estate, launched 2015) and XLC (communication services, launched 2018): too recent |
-| Period | 5 January 1999 – 30 September 2026: 6,977 common trading days |
-| Treatment | Common trading days kept before computing returns; log returns for covariances, correlations and eigenvalues; simple returns for drawdowns and the Monte Carlo |
+| Period | 4 January 1999 – 30 September 2026: 6,978 common trading days, 6,977 daily returns |
+| Treatment | Common trading days kept before computing returns; log returns for covariances, correlations and eigenvalues; simple returns for drawdowns and the Monte Carlo (correlations, volatilities and means) |
 | Crises | SPY total-return drawdowns of at least 20%, peak to trough, detected from the data: 2000–2002 (637 days), 2007–2009 (355), 2020 (23), 2022 (195) |
 | Portfolio | Equal weights across the nine sectors, rebalanced daily |
 
@@ -44,7 +45,7 @@ An equal-weight portfolio of the nine original S&P 500 sector ETFs spreads its r
 | 4. Volatility correction | Forbes & Rigobon (2002) adjustment of crisis correlations, with δ from the SPY variance |
 | 5. Absorption ratio | Eigenvalue decomposition R = BΛBᵀ by regime and on rolling 500-day and 63-day windows (Kritzman et al., 2011) |
 | 6. Stress matrices | Worst-case and inconsistent expert matrices that break Cholesky; repair by eigenvalue clipping (Rebonato & Jäckel, 2000) and by Higham's (2002) nearest correlation matrix |
-| 7. Monte Carlo | Cholesky simulation X = μ + diag(σ)LZ, 10,000 one-year paths per scenario, same mean everywhere: calm, crisis correlations, crisis correlations and volatilities, worst-case stress |
+| 7. Monte Carlo | Cholesky simulation X = μ + diag(σ)LZ, 10,000 one-year paths per scenario, same mean everywhere: calm, crisis correlations only, crisis volatilities only, both, worst-case stress; decomposition of the crisis effect in both orders (Shapley) |
 
 ## Other results
 
@@ -58,10 +59,17 @@ An equal-weight portfolio of the nine original S&P 500 sector ETFs spreads its r
 
 | Monte Carlo scenario (simulated) | Portfolio volatility | Diversification ratio | P(loss > 20%), 1 year |
 |:---|:---|:---|:---|
-| 1. Calm | 15.1% | 1.25 | 1.75% |
-| 2. Crisis correlations | 16.5% | 1.14 | 2.91% |
-| 3. Crisis correlations + volatilities | 35.9% | 1.15 | 22.67% |
-| 4. Worst-case stress (Higham) | 39.1% | 1.05 | 25.47% |
+| 1. Calm | 15.0% | 1.25 | 1.75% |
+| 2. Crisis correlations only | 16.5% | 1.14 | 2.89% |
+| 3. Crisis volatilities only | 33.0% | 1.24 | 20.04% |
+| 4. Crisis correlations + volatilities | 35.8% | 1.15 | 22.06% |
+| 5. Worst-case stress (Higham) | 39.1% | 1.05 | 26.12% |
+
+| Decomposition, scenario 1 → 4 | Correlation effect | Volatility effect |
+|:---|:---|:---|
+| P(loss > 20%, 1 year), correlations first | +1.14 pts | +19.17 pts |
+| P(loss > 20%, 1 year), volatilities first | +2.02 pts | +18.29 pts |
+| **Average (Shapley)** | **+1.58 pts** | **+18.73 pts** |
 
 ![S&P 500 drawdown and crisis windows](assets/spy_drawdown_crises.png)
 
@@ -75,7 +83,7 @@ An equal-weight portfolio of the nine original S&P 500 sector ETFs spreads its r
 - The 2020 crisis has only 23 observations: its correlations are noisy and its matrix is close to singular.
 - The Forbes & Rigobon correction assumes a single common shock and constant sector-specific variance, and tends to overcorrect (Corsetti, Pericoli & Sbracia, 2005).
 - Equal-weighted rolling windows create step changes when extreme days leave the window; the absorption ratio is computed on correlations and is not tested as an early-warning signal.
-- The Monte Carlo is Gaussian and i.i.d.: no fat tails and no volatility clustering. It gives a 0% probability of a one-day loss above 10%, although the SPY lost 10.9% on 16 March 2020. A multivariate Student t would be the natural extension. Crisis volatility is assumed to last a full year, and the same positive mean is used in every scenario.
+- The Monte Carlo is Gaussian and i.i.d.: no fat tails and no volatility clustering. It gives a 0% probability of a one-day loss above 10%, although the SPY lost 10.9% on 16 March 2020. A multivariate Student t would be the natural extension. Crisis volatility is assumed to last a full year, and the same positive mean is used in every scenario. The worst-case matrix is built from log-return correlations, the other scenarios from simple returns (largest gap 0.009).
 - The nine sectors are US large caps exposed to the same market factor; the result concerns sector diversification, not diversification across asset classes. Daily rebalancing ignores transaction costs.
 
 ## How to run

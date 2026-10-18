@@ -23,7 +23,7 @@ L'optimisation moyenne-variance retient le portefeuille qui offre le meilleur re
 
 ## Méthode
 
-1. **Données et contrôle de qualité.** Les prix sont alignés sur les jours de bourse communs *avant* le calcul des rendements : les mouvements du Bitcoin du week-end sont ainsi intégrés à son rendement du lundi. Le taux sans risque est le taux quotidien réel des bons du Trésor (1,98 % en moyenne), et non une constante.
+1. **Données et contrôle de qualité.** Les prix sont alignés sur les jours de bourse communs *avant* le calcul des rendements : les mouvements du Bitcoin du week-end sont ainsi intégrés à son rendement du lundi. Le taux sans risque est le taux quotidien observé des bons du Trésor (1,98 % en moyenne), et non une constante.
 2. **Frontière efficiente.** 20 000 portefeuilles sans vente à découvert simulés par une loi de Dirichlet (graine fixée), et la frontière exacte obtenue par optimisation SLSQP.
 3. **Portefeuille tangent et CML.** Portefeuille de Sharpe maximal, validé par la simulation (meilleur Sharpe simulé 1,3115 < tangent 1,3160).
 4. **Stabilité et test hors échantillon.** Pondérations du portefeuille tangent recalculées sur des fenêtres glissantes de 3 ans tous les 6 mois ; les trois portefeuilles estimés sur 2015-2021 puis conservés tels quels sur 2022-2025.

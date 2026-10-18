@@ -18,3 +18,11 @@ __pycache__/
 # Editors and OS files
 .vscode/
 Thumbs.db
+
+
+
+# Jupyter
+.ipynb_checkpoints/
+
+# French study notebooks (kept local)
+*_fr.ipynb

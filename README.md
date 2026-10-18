@@ -14,6 +14,7 @@ Each project lives in its own folder, with its code, a short write-up and instru
 | 04 | [Forecasting the US yield curve: Diebold-Li vs random walk, 1982–2026](04-yield-curve-forecasting/) | Whether the Nelson-Siegel factors forecast the curve out of sample, with a Diebold-Mariano test and a robustness check | Python, NumPy, pandas, SciPy, FRED API |
 | 05 | [Bitcoin vs S&P 500: is the Sharpe ratio difference real? 2015–2026](05-asset-risk-beyond-volatility/) | Whether Bitcoin's higher Sharpe ratio is distinguishable from chance, with fat tails, a paired block bootstrap and a start-date robustness check | Python, NumPy, pandas, SciPy, yfinance, FRED API |
 | 06 | [Does sector diversification survive market crises? 1999–2026](06-diversification-under-stress/) | How sector correlations change in crises, a volatility correction, a stress matrix that breaks Cholesky, and a Monte Carlo of portfolio losses | Python, NumPy, pandas, yfinance |
+| 07 | [Efficient frontier and downside risk](./07-efficient-frontier-downside-risk) | Is the Sharpe-optimal portfolio the least risky in a crash? Tangency vs minimum variance at equal risk, out-of-sample test, VaR/CVaR under 4 methods | Python, pandas, SciPy, yfinance, FRED API |
 
 
 More projects coming soon.

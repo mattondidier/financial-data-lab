@@ -50,7 +50,7 @@ Mean-variance optimization selects the portfolio with the best return per unit o
 
 At the same volatility, the diluted tangency portfolio earns almost twice as much as minimum variance, with a tail barely heavier per unit of risk (a normal distribution would give 2.67 daily volatilities). Minimum variance protects better in a sudden crash, the diluted tangency portfolio in a rate shock.
 
-> **Caveat.** The 2022 comparison is in-sample: the full-sample tangency portfolio holds no TLT partly because it was estimated on data that include the 2022 bond crash. Estimated on 2015–2021 only, it held 38% TLT and fell to $0.69 per dollar in 2022, below the minimum-variance portfolio ($0.75, section 5). The Covid result is robust; the 2022 result and the return advantage (weights chosen with hindsight on gold and Bitcoin) are optimistic for the tangency portfolio.
+> **Caveat.** The 2022 comparison is in-sample: the full-sample tangency portfolio holds no TLT partly because it was estimated on data that include the 2022 bond crash. Estimated on 2015–2021 only, it held 38% TLT and fell to $0.69 per dollar in 2022, below the minimum-variance portfolio ($0.75, section 5 of the notebook). The Covid result is robust; the 2022 result and the return advantage (weights chosen with hindsight on gold and Bitcoin) are optimistic for the tangency portfolio.
 
 ![Tail risk by method](assets/cvar_comparison.png)
 
